@@ -1,7 +1,7 @@
 import { getStarships } from './services/starshipService'
 import { useState, useEffect } from 'react'
 import StarshipList from './components/StarshipList/StarshipList'
-import StarshipSearch from './components/StarshipSearch/StarshipSearch'
+
 import axios from 'axios'
 
 const App = () => {
@@ -57,7 +57,7 @@ const App = () => {
       value={searchTerm}
     />
     <button type="submit">Find a Starship!</button>
-    <button onClick={() => setDisplayStarships}>Show All</button>
+    <button onClick={() => useEffect}>Show All</button>
   </form>
   <StarshipList starships={starshipsData}/>
 </section>
